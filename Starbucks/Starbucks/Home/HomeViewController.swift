@@ -93,7 +93,7 @@ extension HomeViewController {
     }
 }
 
-// MARK: - Animating Scroll View
+// MARK: - Animating Scroll View 
 extension HomeViewController: UIScrollViewDelegate {
     
     private func setupScrollView() {
