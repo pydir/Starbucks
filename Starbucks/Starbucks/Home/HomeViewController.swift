@@ -15,13 +15,11 @@ class HomeViewController: UIViewController {
     var headerViewTopConstraint: NSLayoutConstraint?
     
     let tiles   = [
-        TileView("Star Balance"),
-        TileView("Bonus Star"),
-        TileView("Try These"),
-        TileView("Welcome Back"),
-        TileView("Uplifting")
+        TileViewController(title: "Breakfast made meatless", subtitle: "Try the beyond Meta, Cheddar & Egg Breakfast Sandwich. Vegeterian and protein-packed.", imageName: "meatless"),
+        TileViewController(title: "Uplifting our communites", subtitle: "Thanks to our partners nominations. The Stackbucks Foundation is donating $521K to more than 200 charities.", imageName: "communities"),
+        TileViewController(title: "Spend at least $15 for 50 bonus stars.", subtitle: "Collect 50 Bonus Stars when you spend at least $15 pre-tax", imageName: "bonus"),
     ]
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -45,7 +43,7 @@ extension HomeViewController {
         
         stackView.translatesAutoresizingMaskIntoConstraints  = false
         stackView.axis      = .vertical
-        stackView.spacing   = 8
+        stackView.spacing   = 18
         
         
     }
@@ -93,7 +91,7 @@ extension HomeViewController {
     }
 }
 
-// MARK: - Animating Scroll View 
+// MARK: - Animating Scroll View
 extension HomeViewController: UIScrollViewDelegate {
     
     private func setupScrollView() {

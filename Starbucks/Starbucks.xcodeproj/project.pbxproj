@@ -13,7 +13,9 @@
 		936915182CBACA8F00941E12 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915172CBACA8F00941E12 /* MainViewController.swift */; };
 		9369151B2CBACBBB00941E12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369151A2CBACBBB00941E12 /* HomeViewController.swift */; };
 		9369151F2CBAD83800941E12 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369151E2CBAD83800941E12 /* HomeHeaderView.swift */; };
-		936915212CBAF0D500941E12 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915202CBAF0D500941E12 /* TileView.swift */; };
+		936915212CBAF0D500941E12 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915202CBAF0D500941E12 /* PlaceholderViewController.swift */; };
+		936915232CBBB5C800941E12 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915222CBBB5C800941E12 /* TileViewController.swift */; };
+		936915252CBBB5F100941E12 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915242CBBB5F100941E12 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		936915172CBACA8F00941E12 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9369151A2CBACBBB00941E12 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9369151E2CBAD83800941E12 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
-		936915202CBAF0D500941E12 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		936915202CBAF0D500941E12 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
+		936915222CBBB5C800941E12 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
+		936915242CBBB5F100941E12 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -90,7 +94,9 @@
 			children = (
 				9369151A2CBACBBB00941E12 /* HomeViewController.swift */,
 				9369151E2CBAD83800941E12 /* HomeHeaderView.swift */,
-				936915202CBAF0D500941E12 /* TileView.swift */,
+				936915222CBBB5C800941E12 /* TileViewController.swift */,
+				936915242CBBB5F100941E12 /* TileView.swift */,
+				936915202CBAF0D500941E12 /* PlaceholderViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936915232CBBB5C800941E12 /* TileViewController.swift in Sources */,
 				9369151F2CBAD83800941E12 /* HomeHeaderView.swift in Sources */,
-				936915212CBAF0D500941E12 /* TileView.swift in Sources */,
+				936915212CBAF0D500941E12 /* PlaceholderViewController.swift in Sources */,
 				936915182CBACA8F00941E12 /* MainViewController.swift in Sources */,
+				936915252CBBB5F100941E12 /* TileView.swift in Sources */,
 				936914FB2CBAB4AB00941E12 /* AppDelegate.swift in Sources */,
 				9369151B2CBACBBB00941E12 /* HomeViewController.swift in Sources */,
 			);
