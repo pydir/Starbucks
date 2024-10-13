@@ -46,6 +46,11 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		936915352CBC1FB400941E12 /* StarRewards */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = StarRewards;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,7 @@
 		936915192CBACBB100941E12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				936915352CBC1FB400941E12 /* StarRewards */,
 				936915262CBBC7B800941E12 /* Rewards */,
 				9369151A2CBACBBB00941E12 /* HomeViewController.swift */,
 				9369151E2CBAD83800941E12 /* HomeHeaderView.swift */,
@@ -138,6 +144,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				9369150E2CBAC7B200941E12 /* Utils */,
+				936915352CBC1FB400941E12 /* StarRewards */,
 			);
 			name = Starbucks;
 			packageProductDependencies = (

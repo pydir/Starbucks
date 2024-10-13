@@ -15,3 +15,10 @@ class UIComponentMakers {
         return UIImageView(image: image)
     }
 }
+
+public extension NSLayoutConstraint {
+    @objc func setActiveBreakable(prioty: UILayoutPriority = UILayoutPriority(900)) {
+        self.priority = prioty
+        isActive = true
+    }
+}

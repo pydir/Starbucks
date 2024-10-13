@@ -8,9 +8,16 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    let topSpacerView = UIView()
     let headerView  = HomeHeaderView()
     let scrollView  = UIScrollView()
     let stackView   = UIStackView()
+    let scanButton  = UIButton()
+    
+    struct ScanButtonSpacing {
+        static let height: CGFloat = 60
+        static let width: CGFloat = 170
+    }
     
     var headerViewTopConstraint: NSLayoutConstraint?
     
@@ -37,20 +44,36 @@ extension HomeViewController {
     }
     
     private func style() {
-        headerView.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .backgroundWhite
+        topSpacerView.backgroundColor = .white
         
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        topSpacerView.translatesAutoresizingMaskIntoConstraints = false
         
-        stackView.translatesAutoresizingMaskIntoConstraints  = false
+        headerView.translatesAutoresizingMaskIntoConstraints    = false
+        
+        scrollView.translatesAutoresizingMaskIntoConstraints    = false
+        
+        stackView.translatesAutoresizingMaskIntoConstraints     = false
         stackView.axis      = .vertical
         stackView.spacing   = 18
         
+        scanButton.translatesAutoresizingMaskIntoConstraints    = false
+        scanButton.setTitle("Scan in Store", for: .normal)
+        scanButton.titleLabel?.minimumScaleFactor = 0.5
+        scanButton.titleLabel?.font = .preferredFont(forTextStyle: .title3)
+        scanButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        scanButton.backgroundColor = .lightGreen
+        scanButton.setTitleColor(.white, for: .normal)
+        scanButton.layer.cornerRadius = ScanButtonSpacing.height / 2
+        scanButton.clipsToBounds = true
         
     }
     
     private func layout() {
+        view.addSubview(topSpacerView)
         view.addSubview(headerView)
         view.addSubview(scrollView)
+        view.addSubview(scanButton)
         
         scrollView.addSubview(stackView)
         
@@ -63,9 +86,19 @@ extension HomeViewController {
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         headerViewTopConstraint?.isActive = true
         
+        // top view
+        NSLayoutConstraint.activate([
+            topSpacerView.topAnchor.constraint(equalTo: view.topAnchor),
+            topSpacerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topSpacerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+//            topSpacerView.heightAnchor.constraint(equalToConstant: 100)
+            topSpacerView.bottomAnchor.constraint(equalToSystemSpacingBelow: headerView.inboxButton.bottomAnchor, multiplier: 2)
+        ])
+        
         
         // header view
         NSLayoutConstraint.activate([
+            headerViewTopConstraint!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: headerView.trailingAnchor),
             
@@ -87,6 +120,14 @@ extension HomeViewController {
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        ])
+        
+        // Scan button
+        NSLayoutConstraint.activate([
+            scanButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            scanButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -16),
+            scanButton.widthAnchor.constraint(equalToConstant: ScanButtonSpacing.width),
+            scanButton.heightAnchor.constraint(equalToConstant: ScanButtonSpacing.height)
         ])
     }
 }
