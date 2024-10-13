@@ -19,6 +19,7 @@ class RewardsTileViewController : UIViewController {
 extension RewardsTileViewController {
     
     private func style() {
+        rewardsTileView.delegate = self
         rewardsTileView.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -31,5 +32,13 @@ extension RewardsTileViewController {
             view.trailingAnchor.constraint(equalTo: rewardsTileView.trailingAnchor),
             rewardsTileView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+}
+
+extension RewardsTileViewController: RewardsTileViewDelegate {
+    func didHistoryDetailsButtonTapped(_ sender: UIButton) {
+        let navController = UINavigationController(rootViewController: HistoryViewController())
+        navController.navigationBar.prefersLargeTitles = true
+        present(navController, animated: true)
     }
 }

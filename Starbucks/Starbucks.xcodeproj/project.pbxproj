@@ -51,6 +51,16 @@
 			path = StarRewards;
 			sourceTree = "<group>";
 		};
+		9369153C2CBC30EE00941E12 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		936915412CBC36DD00941E12 /* History */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = History;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,8 @@
 		936914FA2CBAB4AB00941E12 /* Starbucks */ = {
 			isa = PBXGroup;
 			children = (
+				936915412CBC36DD00941E12 /* History */,
+				9369153C2CBC30EE00941E12 /* Services */,
 				936915192CBACBB100941E12 /* Home */,
 				9369150E2CBAC7B200941E12 /* Utils */,
 				936915002CBAB4AE00941E12 /* Files */,
@@ -145,6 +157,8 @@
 			fileSystemSynchronizedGroups = (
 				9369150E2CBAC7B200941E12 /* Utils */,
 				936915352CBC1FB400941E12 /* StarRewards */,
+				9369153C2CBC30EE00941E12 /* Services */,
+				936915412CBC36DD00941E12 /* History */,
 			);
 			name = Starbucks;
 			packageProductDependencies = (

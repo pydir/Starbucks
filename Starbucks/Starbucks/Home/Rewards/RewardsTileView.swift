@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol RewardsTileViewDelegate {
+    func didHistoryDetailsButtonTapped(_ sender: UIButton)
+}
+
 class RewardsTileView: UIView {
+    var delegate: RewardsTileViewDelegate?
+    
     let balanceView      = BalanceView()
     var rewardsButton    = UIButton()
     let rewardsGraphView = RewardsGraphView()
@@ -54,7 +60,7 @@ extension RewardsTileView {
 //        rewardsGraphView.backgroundColor = .red
         
         detailsButton.translatesAutoresizingMaskIntoConstraints     = false
-        detailsButton.setTitle("Details", for: [])
+        detailsButton.setTitle("History Details", for: [])
         detailsButton.setTitleColor(.label, for: [])
         var detailsButtonConfig = UIButton.Configuration.plain()
         detailsButtonConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16)
@@ -147,8 +153,9 @@ extension RewardsTileView {
         }
     }
     
+    
     @objc private func detailsButtonTapped(_ sender: UIButton) {
-        print("Details tapped!")
+        delegate?.didHistoryDetailsButtonTapped(sender)
     }
     
     private func setChevronUp() {
