@@ -16,6 +16,10 @@
 		936915212CBAF0D500941E12 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915202CBAF0D500941E12 /* PlaceholderViewController.swift */; };
 		936915232CBBB5C800941E12 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915222CBBB5C800941E12 /* TileViewController.swift */; };
 		936915252CBBB5F100941E12 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915242CBBB5F100941E12 /* TileView.swift */; };
+		936915282CBBC7E400941E12 /* RewardsTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915272CBBC7E400941E12 /* RewardsTileViewController.swift */; };
+		9369152A2CBBC7F800941E12 /* RewardsTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936915292CBBC7F800941E12 /* RewardsTileView.swift */; };
+		9369152C2CBBCA8B00941E12 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369152B2CBBCA8B00941E12 /* BalanceView.swift */; };
+		936915302CBC14B400941E12 /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369152F2CBC14B400941E12 /* RewardsGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		936915202CBAF0D500941E12 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		936915222CBBB5C800941E12 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		936915242CBBB5F100941E12 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		936915272CBBC7E400941E12 /* RewardsTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTileViewController.swift; sourceTree = "<group>"; };
+		936915292CBBC7F800941E12 /* RewardsTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTileView.swift; sourceTree = "<group>"; };
+		9369152B2CBBCA8B00941E12 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		9369152F2CBC14B400941E12 /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -92,6 +100,7 @@
 		936915192CBACBB100941E12 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				936915262CBBC7B800941E12 /* Rewards */,
 				9369151A2CBACBBB00941E12 /* HomeViewController.swift */,
 				9369151E2CBAD83800941E12 /* HomeHeaderView.swift */,
 				936915222CBBB5C800941E12 /* TileViewController.swift */,
@@ -99,6 +108,17 @@
 				936915202CBAF0D500941E12 /* PlaceholderViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		936915262CBBC7B800941E12 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				936915272CBBC7E400941E12 /* RewardsTileViewController.swift */,
+				936915292CBBC7F800941E12 /* RewardsTileView.swift */,
+				9369152F2CBC14B400941E12 /* RewardsGraphView.swift */,
+				9369152B2CBBCA8B00941E12 /* BalanceView.swift */,
+			);
+			path = Rewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,11 +198,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				936915232CBBB5C800941E12 /* TileViewController.swift in Sources */,
+				9369152A2CBBC7F800941E12 /* RewardsTileView.swift in Sources */,
 				9369151F2CBAD83800941E12 /* HomeHeaderView.swift in Sources */,
 				936915212CBAF0D500941E12 /* PlaceholderViewController.swift in Sources */,
 				936915182CBACA8F00941E12 /* MainViewController.swift in Sources */,
 				936915252CBBB5F100941E12 /* TileView.swift in Sources */,
+				936915282CBBC7E400941E12 /* RewardsTileViewController.swift in Sources */,
 				936914FB2CBAB4AB00941E12 /* AppDelegate.swift in Sources */,
+				9369152C2CBBCA8B00941E12 /* BalanceView.swift in Sources */,
+				936915302CBC14B400941E12 /* RewardsGraphView.swift in Sources */,
 				9369151B2CBACBBB00941E12 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

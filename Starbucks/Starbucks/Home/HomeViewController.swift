@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var headerViewTopConstraint: NSLayoutConstraint?
     
     let tiles   = [
+        RewardsTileViewController(),
         TileViewController(title: "Breakfast made meatless", subtitle: "Try the beyond Meta, Cheddar & Egg Breakfast Sandwich. Vegeterian and protein-packed.", imageName: "meatless"),
         TileViewController(title: "Uplifting our communites", subtitle: "Thanks to our partners nominations. The Stackbucks Foundation is donating $521K to more than 200 charities.", imageName: "communities"),
         TileViewController(title: "Spend at least $15 for 50 bonus stars.", subtitle: "Collect 50 Bonus Stars when you spend at least $15 pre-tax", imageName: "bonus"),
@@ -37,7 +38,6 @@ extension HomeViewController {
     
     private func style() {
         headerView.translatesAutoresizingMaskIntoConstraints = false
-//        headerView.backgroundColor = appColor
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -74,8 +74,8 @@ extension HomeViewController {
         // scroll view
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 8),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
